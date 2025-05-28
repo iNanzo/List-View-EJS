@@ -1,33 +1,31 @@
-//include Express
 const express = require('express');
-
-//server will listen on this port
+const app = express();
 const port = 3000;
 
-//create instance of Express app
-const app = express();
+// Set EJS as the template engine
+app.set('view engine', 'ejs');
 
-//index/home URL
-app.get('/',(req,res)=>{
-    res.send(`
-	    <h1>Home Page</h1>
-      <p>Welcome to Express!</p>
-  `);
+// Serve static files like images from /public
+app.use(express.static('public'));
 
+// Routes
+app.get('/', (req, res) => {
+  res.render('index', { title: 'Home' });
 });
 
-//about page/url
-app.get('/about',(req,res)=>{
-    res.send(`
-	    <h1>About Page</h1>
-      <p>Stuff about us goes here!</p>
-  `);
-
+app.get('/dnd', (req, res) => {
+  res.render('dnd', { title: 'Dungeons & Dragons' });
 });
 
+app.get('/gamedev', (req, res) => {
+  res.render('gamedev', { title: 'Game Development' });
+});
 
-//Set server to listen for requests
+app.get('/kpop', (req, res) => {
+  res.render('kpop', { title: 'K-Pop' }); // Change topic name as needed
+});
+
+// Start the server
 app.listen(port, () => {
-  console.log(`Server running at port: ${port}`);
+  console.log(`Server running at http://localhost:${port}`);
 });
-
