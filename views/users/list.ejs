@@ -5,7 +5,7 @@
   <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
-  <h1>Welcome to the Newton's <%= title %> Page</h1>
+  <h1><%= title %></h1>
 
   <nav>
     <a href="/">Home</a> |
@@ -15,11 +15,11 @@
     <a href="/users">Users</a>
   </nav>
 
-  <img src="/images/index.jpg" alt="Welcome Image" width="300"/>
-
   <section>
-    <h2>About Me</h2>
-    <p>Hi! I'm Newton — a developer, storyteller, and aspiring project manager. I love exploring fantasy worlds through Dungeons & Dragons, building unique gameplay systems in Unity, and getting lost in the rhythm and energy of K-Pop. This site highlights a few of my passions. Thanks for stopping by!</p>
+    <h2><%= user.name %></h2>
+    <p><strong>Email:</strong> <%= user.email %></p>
+    <p><strong>Bio:</strong> <%= user.bio %></p>
+    <p><a href="/users">← Back to Users</a></p>
   </section>
 
   <footer>

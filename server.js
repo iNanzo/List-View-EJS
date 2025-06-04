@@ -1,6 +1,7 @@
 const express = require('express');
 const app = express();
 const port = 3000;
+const users = require('./data/users.json');
 
 // Set EJS as the template engine
 app.set('view engine', 'ejs');
@@ -28,4 +29,17 @@ app.get('/kpop', (req, res) => {
 // Start the server
 app.listen(port, () => {
   console.log(`Server running at http://localhost:${port}`);
+});
+
+app.get('/users', (req, res) => {
+  res.render('users/index', { title: 'Users', users });
+});
+
+app.get('/users/:id', (req, res) => {
+  const user = users.find(u => u.id === parseInt(req.params.id));
+  if (user) {
+    res.render('users/list', { title: user.name, user });
+  } else {
+    res.status(404).send('User not found');
+  }
 });

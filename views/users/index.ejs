@@ -5,7 +5,7 @@
   <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
-  <h1>Welcome to the Newton's <%= title %> Page</h1>
+  <h1>Welcome to Newton's <%= title %> Page</h1>
 
   <nav>
     <a href="/">Home</a> |
@@ -15,11 +15,17 @@
     <a href="/users">Users</a>
   </nav>
 
-  <img src="/images/kpop.jpg" alt="K-Pop Image" width="300"/>
-
   <section>
     <h2><%= title %></h2>
-    <p>Whether it's the choreography, stage design, or storytelling in music videos, K-Pop is a huge creative influence for me. I love how performance, fashion, and emotion all come together in this genre.</p>
+    <p>This page is a demo built using Node.js/Express.js and EJS templates. It demonstrates a list/view design pattern and pulls data from a JSON file. The content is based on characters appearing in my D&D campaign.</p>
+
+    <ul>
+      <% users.forEach(user => { %>
+        <li>
+          <a href="/users/<%= user.id %>"><%= user.name %></a>
+        </li>
+      <% }) %>
+    </ul>
   </section>
 
   <footer>
