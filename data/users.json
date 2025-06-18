@@ -3,24 +3,24 @@
     "id": 1,
     "name": "Vallen Voss",
     "email": "vallen@trueorder.ast",
-    "bio": "A half-elf revenant and enigmatic leader of the True Order, burdened with restoring the shattered legacy of Sa’dakar."
+    "bio": "The half-elf enigmatic leader of the True Order, burdened with restoring the shattered legacy of Sa’dakar."
   },
   {
     "id": 2,
     "name": "Ophelia",
     "email": "ophelia@roseveil.ast",
-    "bio": "A fierce tiefling warrior and former Sister of the Rose. Possesses a shard of the Blade and a hidden bloodline."
+    "bio": "A fierce half-tiefling mage and former Sister of the Rose."
   },
   {
     "id": 3,
     "name": "Ser Kaelen the Ashen",
     "email": "kaelen@ebonwatch.ast",
-    "bio": "A once-honorable knight turned zealot, now exiled after razing Ebonreach in pursuit of false prophecy."
+    "bio": "Once a knight of the True Order turned zealot, now exiled after razing Ebonreach in pursuit of false prophecy."
   },
   {
     "id": 4,
     "name": "Venya Ashveil",
     "email": "venya@spire.ast",
-    "bio": "A powerful mage of the Spire who seeks balance between order and knowledge. Known for tactical brilliance and cold resolve."
+    "bio": "A powerful spellblade of the Spire who seeks balance between order and knowledge. Known for tactical brilliance and cold resolve."
   }
 ]
